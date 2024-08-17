@@ -28,13 +28,15 @@ const collectEmployees = function() {
     salaryTemp = prompt("Please enter your Salary", "");
     employee.salary = parseInt(salaryTemp);
 
-    while (employee.firstName === "" || employee.firstName === "") {
+    while (employee.firstName === "" ) {
 
-      if (employee.firstName === "") {
         employee.firstName = prompt("Please enter your name", "");
-      } else {
+
+    }
+
+    while (employee.lastName === "") {
+
         employee.lastName = prompt("Please enter your Last Name", "");
-      }
     }
     
     while (isNaN(employee.salary) || employee.salary < 0) {
