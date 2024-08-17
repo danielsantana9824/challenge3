@@ -24,9 +24,6 @@ const collectEmployees = function() {
    };
   
     employee.firstName = prompt("Please enter your name", "");
-    employee.lastName = prompt("Please enter your Last Name", "");
-    salaryTemp = prompt("Please enter your Salary", "");
-    employee.salary = parseInt(salaryTemp);
 
     while (employee.firstName === "" ) {
 
@@ -34,11 +31,16 @@ const collectEmployees = function() {
 
     }
 
+    employee.lastName = prompt("Please enter your Last Name", "");
+
     while (employee.lastName === "") {
 
         employee.lastName = prompt("Please enter your Last Name", "");
     }
-    
+
+    salaryTemp = prompt("Please enter your Salary", "");
+    employee.salary = parseInt(salaryTemp);
+
     while (isNaN(employee.salary) || employee.salary < 0) {
 
       if (isNaN(employee.salary)) {
@@ -50,13 +52,12 @@ const collectEmployees = function() {
       }
   
     }
-    
+
     this.stop = confirm("¿Do you wanna continue?");
     employees.push(employee);
   }
 
-
-  return employees;
+  return employees.sort();
 
 }
 
