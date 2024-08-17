@@ -40,7 +40,7 @@ const collectEmployees = function() {
     while (isNaN(employee.salary) || employee.salary < 0) {
 
       if (isNaN(employee.salary)) {
-        salaryTemp = prompt("Please enter your Salary.They can only be numbers, not letters.", "");
+        salaryTemp = prompt("Please enter your Salary.They can only be numbers, not letters or you can't not fill out.", "");
        employee.salary = parseInt(salaryTemp);
       } else {
         salaryTemp = prompt("Please enter your Salary.They can't be negative numbers.", "");
